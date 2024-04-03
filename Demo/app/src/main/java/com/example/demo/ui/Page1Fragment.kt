@@ -24,7 +24,9 @@ class Page1Fragment : Fragment() {
         binding.btnSecret.setOnClickListener { secret() }
 
         // TODO(9): Hide button if not login
-
+        if (auth.getUser() == null) {
+            binding.btnSecret.visibility =View.INVISIBLE
+        }
 
         // -----------------------------------------------------------------------------------------
         return binding.root

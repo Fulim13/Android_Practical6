@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.demo.R
 import com.example.demo.data.AuthVM
 import com.example.demo.databinding.FragmentLoginBinding
+import com.example.demo.util.errorDialog
+import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
 
@@ -45,7 +48,20 @@ class LoginFragment : Fragment() {
 
         // TODO(3): Login -> auth.login(...)
         //          Clear navigation backstack
+        //Asynchronouse - last run
+        lifecycleScope.launch {
+            val success = auth.login(email,password,remember)
 
+            if (success){
+                //clear navigation history
+                nav.popBackStack(R.id.homeFragment, false)
+                nav.navigateUp()
+
+
+            } else {
+                errorDialog("Invalid login credentials.")
+            }
+        }
 
     }
 

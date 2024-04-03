@@ -18,6 +18,7 @@ class UserVM(val app: Application) : AndroidViewModel(app) {
     private var listener: ListenerRegistration? = null
 
     init {
+        //any changes in db, the code will run again
         listener = USERS.addSnapshotListener { snap, _ -> usersLD.value = snap?.toObjects() }
     }
 
@@ -36,7 +37,7 @@ class UserVM(val app: Application) : AndroidViewModel(app) {
     fun get(email: String) = usersLD.value?.find { it.email == email }
 
     fun set(user: User) {
-        USERS.document(user.email).set(user);
+        USERS.document(user.email).set(user)
     }
 
     fun delete(email: String) {
