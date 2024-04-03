@@ -1,0 +1,16 @@
+(1) Module-Level Gradle
+-----------------------
+
+plugins {
+    id("com.google.gms.google-services") version "4.4.1"
+}
+
+dependencies {
+    implementation("com.google.firebase:firebase-firestore:24.11.0")
+}
+
+
+(2) google-services.json
+------------------------
+
+Copy the json file to your [app] folder.

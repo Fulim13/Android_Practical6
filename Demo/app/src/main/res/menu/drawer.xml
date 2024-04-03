@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/loginFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        android:icon="@drawable/ic_login"
+        android:title="Login" />
+    <item
+        android:id="@+id/registerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        android:icon="@drawable/ic_register"
+        android:title="Register" />
+    <group
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <item
+            android:id="@+id/homeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <item
+            android:id="@+id/page1Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:icon="@drawable/ic_page1"
+            android:title="Page 1" />
+        <item
+            android:id="@+id/page2Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:icon="@drawable/ic_page2"
+            android:title="Page 2" />
+    </group>
+    <item
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_exit"
+        android:title="Exit" />
+
+</menu>
