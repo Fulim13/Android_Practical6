@@ -14,8 +14,14 @@ Swap to project view > app > google-services.json
 Data.kt -> Data model
 UserVM.kt > CRUD
 
+# Extra Information
 AndroidViewModel(vs ViewModel) allow to pass the app to allow use to access context > resource
 
 view is a div
 
 view > tool window > device explorer > data > data > com.example.demo > AUTH.xml
+
+![extra_1](extra_1.jpg)
+
+To clear the history stack, so that when user log out ( or being deleted), it cannot access page 3 and 4 which are only can be accessed by the authenticate user
+![extra_2](extra_2.jpg)
